@@ -11,6 +11,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("Hello there");
+});
+
 app.post("/", async (req, res) => {
   try {
     const stringifiedRequest = JSON.stringify(req);
